@@ -1,0 +1,24 @@
+Lmnet_ROM.py is the main driver
+
+Important parameters: 
+"d" input dimension, 
+"neural" the total unit at each layer
+"layers" number of layers
+change "M" (1,2,3,4..) to choose different step
+change scheme="AM" to choose different discretization.  
+'AM': Adams_Moulton,
+'AB': Adams_Bashforth,
+'BDF': backward_difference_formula
+
+The training data "Xtrain \in r X Ns", each coloum corresponds to the ROM coefficients 
+at each time step, r is the system dimension, Ns is the number of snapshots.
+
+Multistep_NN.py contains the function class needed
+
+Data folder contains training data for 2D NSE and 1D burgers equation
+
+
+PECENN_ROM.py is the driver code for predictor-corrector discretization method. hyper-parameters are the same as in Lmnet_rom.py
+multistep_PECE.py is the function class for PECE neural network model.
+
+
